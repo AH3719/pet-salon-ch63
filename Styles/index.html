@@ -3,68 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paws & Relax | Pet Salon Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home | Angel Paws - Pet Salon </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-brand salon-name-display">Angel Paws - Pet Salon </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="registration.html">Registration</a></li>
+        </ul>
+    </nav>
 
-    <div class="main-container">
-        <header>
-            <h1>🐾 Angel Paws</h1>
-            <p>Salon Management Dashboard</p>
-        </header>
+    <div class="hero-section">
+        <h1 class="salon-name-display">Loading...</h1>
+        <p>Heavenly care for every paw.</p>
+        
+        <div class="info-box">
+            <h3>Visit Us</h3>
+            <p class="salon-address-display">Loading...</p>
+            <p class="salon-phone-display">Loading...</p>
+        </div>
 
-        <section class="stats-container">
-            <div class="stat-card">
-                <h3>Registered Pets</h3>
-                <p id="total-pets" class="stat-number">0</p>
-            </div>
-            <div class="stat-card extra-challenge">
-                <h3>Average Pet Age</h3>
-                <p id="average-age" class="stat-number">0</p>
-                <span class="label">years old</span>
-            </div>
-        </section>
-
-        <section class="form-card">
-            <h2>New Pet Registration</h2>
-            <form id="pet-form" onsubmit="event.preventDefault(); registerPet();">
-                <div class="input-group">
-                    <input type="text" id="txt-name" placeholder="Pet Name" required>
-                    <input type="number" id="txt-age" placeholder="Age" required>
-                </div>
-                
-                <div class="input-group">
-                    <select id="txt-gender">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                    <select id="txt-service">
-                        <option value="General Grooming">General Grooming</option>
-                        <option value="Vaccines">Vaccines</option>
-                        <option value="De-shedding">De-shedding</option>
-                        <option value="Nail Clip">Nail Clip</option>
-                    </select>
-                </div>
-
-                <input type="text" id="txt-breed" placeholder="Breed" required>
-
-                <button type="submit" class="btn-register">Register Pet</button>
-            </form>
-        </section>
-
-        <hr>
-
-        <section class="content-area">
-            <h2>Currently In Salon</h2>
-            <ul id="pet-list"></ul>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 Angel Paws Salon</p>
-        </footer>
+        <br>
+        <a href="registration.html" class="btn btn-primary">Register a Pet Now</a>
     </div>
+
+    <footer>
+        <p>&copy; 2025 <span class="salon-name-display"></span></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
