@@ -10,9 +10,9 @@ const salon = {
 
 // Available services (for services.html)
 const services = [
-    "VIP Package (Bath, Haircut, Styling)",
-    "Vaccines & Checkup",
-    "Nail Trimming & Paw Cleaning",
+    "VIP Package (Bath, Haircut, Styling)............................................................................................................................................................$150",
+    "Vaccines & Checkup...................$49",
+    "Nail Trimming & Paw Cleaning...................$29",
     "De-shedding Treatment",
     "Basic Bath & Brush"
 ];

@@ -49,3 +49,7 @@
     font-size: 0.85rem;
     font-weight: bold;
 }
+/* highlight invalid inputs */
+.input-error {
+  border: 2px solid red !important;
+}

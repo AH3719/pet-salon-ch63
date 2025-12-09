@@ -40,7 +40,16 @@
     <footer>
         <p>&copy; 2025 <span class="salon-name-display"></span></p>
     </footer>
-
+<!-- jQuery (needed for the validation) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
+    <form id="service-form">
+  <input id="serviceName" class="service-input" type="text" placeholder="Service name">
+  <input id="servicePrice" class="service-input" type="number" placeholder="Price">
+  <input id="serviceCategory" class="service-input" type="text" placeholder="Category">
+  <input id="serviceDescription" class="service-input" type="text" placeholder="Description">
+
+  <button type="button" id="btnRegisterService">Register Service</button>
+</form>
 </body>
 </html>
