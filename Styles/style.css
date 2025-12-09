@@ -53,3 +53,76 @@
 .input-error {
   border: 2px solid red !important;
 }
+/* --- CSS VARIABLES FOR THEMES --- */
+
+/* Default (Light) Theme Variables */
+:root {
+    --bg-color: #f8f9fa;        /* Light background */
+    --text-color: #212529;      /* Dark text */
+    --card-bg: #ffffff;         /* White card/form background */
+    --primary-bg: #0d6efd;      /* Bootstrap Primary Blue */
+    --primary-text: #ffffff;    /* White text on primary background */
+    --border-color: #ced4da;
+}
+
+/* Dark Theme Variables (applied when the 'dark-mode' class is on the body) */
+body.dark-mode {
+    --bg-color: #212529;        /* Dark background */
+    --text-color: #f8f9fa;      /* Light text */
+    --card-bg: #343a40;         /* Dark gray card/form background */
+    --primary-bg: #495057;      /* Darker Primary/Header */
+    --primary-text: #ffffff;    /* White text on primary background */
+    --border-color: #495057;
+}
+
+/* --- APPLYING VARIABLES TO ELEMENTS --- */
+
+/* General Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color); 
+    color: var(--text-color);          
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-bg) !important;
+    color: var(--primary-text) !important;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--card-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+.navbar-brand, .nav-link {
+    color: var(--text-color) !important;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary-bg) !important; 
+}
+
+
+/* Service Registration Section Styling */
+#service-registration {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color) !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Input Fields*/
+.form-control {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+/* JQUERY VALIDATION ERROR STYLE */
+.error {
+    border: 3px solid #dc3545 !important; 
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.6); 
+}

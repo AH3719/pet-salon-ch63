@@ -225,6 +225,49 @@ function resetFormState() {
 }
 window.onload = function() {
     displaySalonInfo();
-    displayTable(); // should only run if pet-table-body exists (on registration.html)
-    displayServices(); // should only run if service-list exists (on services.html)
+    displayTable(); 
+    displayServices(); 
 };
+
+// Function to initialize dark mode
+function initDarkMode() {
+    // 1. Check local storage for the user's preference
+    if (localStorage.getItem('theme') === 'dark') {
+        $('body').addClass('dark-mode');
+    }
+
+    // 2. Attach click handler to the toggle button
+    $('#darkModeToggle').on('click', function() {
+        // Toggle the 'dark-mode' class on the body
+        $('body').toggleClass('dark-mode');
+
+        // Check the current state after toggling
+        if ($('body').hasClass('dark-mode')) {
+            // If dark mode is active, save the preference
+            localStorage.setItem('theme', 'dark');
+        } else {
+            // If dark mode is not active, save the light preference
+            localStorage.setItem('theme', 'light');
+        }
+    });
+}
+
+
+// Initialization function
+function init() {
+    console.log("Pet Salon App Initialized");
+    
+    // Hook up the dark mode initialization
+    initDarkMode(); // <-- NEW LINE
+
+    // Hook up the register function to the button click event ONLY on registration.html
+    if ($('#btnRegister').length) {
+        $('#btnRegister').click(register);
+    }
+    
+    // Display services if the user is on the services.html page
+    if ($('#servicesTableBody').length) {
+        displayServices();
+    }
+}
+$(document).ready(init);
